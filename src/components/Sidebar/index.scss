@@ -76,6 +76,12 @@
           }
       }
     }
+    a.works-link {
+        &:after {
+            content: "Works";
+        }
+    }
+
     a.about-link {
         &:after {
             content: "ABOUT";
