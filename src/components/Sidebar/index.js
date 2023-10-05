@@ -4,13 +4,12 @@ import LogoSubtitle from '../../assets/images/logo_sub.png';
 import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome , faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faHome , faUser, faEnvelope, faSuitcase } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => (
   <div className="nav-bar">
     <Link className="logo" to="/">
-    <rect clip-path="url(#:R2sm:monogram-clip)" width="100%" height="100%" />
       <img src={LogoO} alt="logo" />
       <img className="sub-logo" src={LogoSubtitle} alt="Ouail logo name" />
     </Link>
