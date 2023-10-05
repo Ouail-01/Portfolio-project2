@@ -1,47 +1,24 @@
 /* eslint-disable */
 import './index.scss';
+import LogoTitle from "../../assets/images/logo-o.png"
+import { Link } from 'react-router-dom';
 
-const Home = () => (
-  <div className="nav-bar">
-    <Link className="logo" to="/">
-    <rect clip-path="url(#:R2sm:monogram-clip)" width="100%" height="100%" />
-      <img src={LogoO} alt="logo" />
-      <img className="sub-logo" src={LogoSubtitle} alt="Ouail logo name" />
-    </Link>
+const Home = () => {
+  return (
+    <div className="container home-page">
+      <div className="text-zone">
+        <h1>Hey, <br /> I'm 
+        <img src={LogoTitle} />
+        uail
+        <br />
+        I'm a full-stack developer
+        </h1>
+        <h2>Front End Developer / JavaScript Expert / Freelancer</h2>
+        <Link to="/contact" className="flat-button" >Contact me</Link>
 
-    <nav>
-      <NavLink exact="true" activeclassname="active" to="/">
-        <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
-      </NavLink>
-      <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
-        <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
-      </NavLink>
-      <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
-        <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-      </NavLink>
-    </nav>
-
-    <ul>
-      <li>
-        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ouail-laarabi/" >
-          <FontAwesomeIcon icon={faLinkedin} color="4d4d4e"/>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noreferrer" href="https://github.com/Ouail-01" >
-          <FontAwesomeIcon icon={faGithub} color="4d4d4e"/>
-        </a>
-      </li>
-
-      <li>
-        <a target="_blank" rel="noreferrer" href="https://twitter.com/Ouail_Laarabi" >
-          <FontAwesomeIcon icon={faTwitter} color="4d4d4e"/>
-        </a>
-      </li>
-    </ul>
-
-  </div>
-);
+      </div>
+    </div>
+  )
+}
 
 export default Home;

@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { Outlet } from 'react-router-dom';
+import Home from '../Home/index';
 import Sidebar from '../Sidebar';
 import './index.scss';
 
@@ -11,6 +12,7 @@ const Layout = () => {
       <span className="tags top-tags">&lt;body&gt;</span>
 
       <Outlet />
+      <Home />
 
       <span className="tags bottom-tags">
         &lt;/body&gt;
