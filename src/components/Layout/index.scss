@@ -16,7 +16,7 @@
   left: 120px;
   bottom: 0;
   font-size: 18px;
-  font-family: "La Belle Aurore";
+  font-family: 'La Belle Aurore', cursive;
 }
 
 .bottom-tag-html {
@@ -39,20 +39,13 @@
 
 }
 
-.about-page {
-  .text-zone {
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 35%;
-    vertical-align: middle;
-    display: table-cell;
-    min-height: 90%;
-
+.container.contact-page,
+.container.about-page,
+.container.portfolio-page {
+  
     h1 {
       font-size: 53px;
-      font-family: 'Coolvetiva';
+      font-family: 'Coolvetica';
       color: #2aa198;
       font-weight: 400;
       margin-top: 0;
@@ -62,7 +55,8 @@
 
       &::before {
         content: '<h1>';
-        font-family: 'La Belle Aurore';
+        font-family: 'La Belle Aurore', cursive;
+        color: #2aa198;
         font-size: 18px;
         position: absolute;
         margin-top: -10px;
@@ -73,10 +67,10 @@
 
       &::after {
         content: '</h1>';
-        font-family: 'La Belle Aurore';
+        font-family: 'La Belle Aurore', cursive;
+        color: #2aa198;
         font-size: 18px;
         position: absolute;
-        margin-top: -10px;
         left: -30px;
         bottom: -20px;
         margin-left: 20px;
@@ -91,7 +85,7 @@
       color: #fff;
       font-family: sans-serif;
       font-weight: 300;
-      min-width: fit-content;
+      max-width: fit-content;
       animation: pulse 1s;
 
       &:nth-of-type(1) {
@@ -104,15 +98,21 @@
         animation-delay: 1.3s;
       }
     }
-    
-  }
 
-  
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+  }
 
   .text-animate-hover {
     &:hover {
       color: #fff;
     }
-
   }
 }
