@@ -6,13 +6,13 @@ import { useEffect, useState } from 'react';
 import AnimatedLetters from '../AnimatedLetters';
 import LogoO from '../../assets/images/logo-ol.png'
 import Loader from 'react-loaders';
+import Text from './Text';
 
 const Home = () => {
-
   const [letterClass, setLetterClass] = useState("text-animate");
   const nameArray = ['u', 'a', 'i', 'l'];
   const jobArray = ["I'", 'm', ' ' , 'a', ' ', 'f', 'u', 'l', 'l', '-', 's', 't', 'a', 'c', 'k', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r'];
-  
+
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setLetterClass('text-animate-hover');
@@ -21,8 +21,6 @@ const Home = () => {
     // Cleanup function to clear the timeout when the component unmounts or the effect is re-run
     return () => clearTimeout(timeoutId);
   }, []);
-  
-
 
   return (
     <>
@@ -41,9 +39,8 @@ const Home = () => {
         <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
         <br />
         <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={15} />
-        {/* Im a full-stack developer */}
         </h1>
-        <h2>Front End Developer / JavaScript Expert / Freelancer</h2>
+        <h2 className="wrap" dataPeriod="1000"><Text /></h2>
         <Link to="/contact" className="flat-button" >Contact me</Link>
 
       </div>
