@@ -40,7 +40,7 @@ const Home = () => {
         <br />
         <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={15} />
         </h1>
-        <h2 className="wrap" dataPeriod="1000"><Text /></h2>
+        <h2 className="wrap"><Text /></h2>
         <Link to="/contact" className="flat-button" >Contact me</Link>
 
       </div>

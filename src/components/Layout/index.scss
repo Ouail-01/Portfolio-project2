@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  // overflow-y: hidden;
 }
 
 .top-tags {
@@ -40,6 +41,7 @@
 }
 
 .container.contact-page,
+// .container.work-page,
 .container.about-page,
 .container.portfolio-page {
   
