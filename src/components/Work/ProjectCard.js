@@ -1,6 +1,7 @@
 /* eslint-disable */
 import liveImg from "../../assets/images/liveDemo-img.png";
 import githubImg from "../../assets/images/github-img.png";
+import style from './index.scss'
 
 export const ProjectCard = ({ title, description, imgUrl, projLink, githubLink }) => {
   
@@ -33,6 +34,8 @@ export const ProjectCard = ({ title, description, imgUrl, projLink, githubLink }
           <p>{description}</p>
         </div>
 
+
+        
       </div>
   )
 }

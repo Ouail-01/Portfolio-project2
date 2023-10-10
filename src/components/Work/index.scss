@@ -70,7 +70,7 @@
         // background: #000;
       position: absolute;
       left: 35%;
-      top: 5%;
+      top: 10%;
       transform: translateY(-50%);
       width: 35%;
       vertical-align: middle;
@@ -92,10 +92,11 @@
         // color: aqua;
         // animation: 1.3s fadeIn forwards;
         position: absolute;
-        left: 12%;
-        top: 15%;
+        left: 10%;
+        top: 27%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
 
         .proj-container {
             // width: 390px;
@@ -108,6 +109,8 @@
             margin-right: 30px;
             border-radius: 20px;
             // cursor: pointer;
+            // opacity: 0;
+            // animation: cardAnimation 3.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
             
             .cards-img {
                 // height: 230px;
@@ -186,5 +189,84 @@
             
 
         }
+        @keyframes cardAnimation {
+            0% {
+              opacity: 0;
+              transform: translateY(50px) scale(0.8);
+            }
+            50% {
+              opacity: 0.7;
+              transform: translateY(10px) scale(1.05);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+            }
+        }
+    }
+
+    .btn_container {
+        position: relative;
+        
+        margin-left: 100px;
+        // margin-right: 100px;
+        // background: #000;
+        width: 92%;
+        display: flex;
+        justify-content: space-between;
+        // justify-content: center;
+        top: 42%;
+        // display: flex;
+        // justify-content: space-between;
+        // justify-content: center;
+        // align-items: center;
+        
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .button {
+            display: block;
+            font-size: 30px;
+            color: #2aa198;
+            background-color: transparent;
+            border: none;
+            cursor: cell;
+        }
+
+        .prev {
+            animation-name: prev;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            cursor: w-resize;
+        }
+          
+        @keyframes prev {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(5px, 0); }
+            100% { transform: translate(0, 0); }
+        }
+
+
+        .next {
+            animation-name: next ;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            cursor: e-resize;
+        }
+          
+        @keyframes next {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(-5px, 0); }
+            100% { transform: translate(0, 0); }
+        }
+        
     }
 }
