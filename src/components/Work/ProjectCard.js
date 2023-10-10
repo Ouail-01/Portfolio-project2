@@ -2,18 +2,10 @@
 import liveImg from "../../assets/images/liveDemo-img.png";
 import githubImg from "../../assets/images/github-img.png";
 
-
-
 export const ProjectCard = ({ title, description, imgUrl, projLink, githubLink }) => {
-
-  const visibleRange = 3;
-  const cardStyles = {
-    display: visibleRange,
-  };
-
   
   return (
-      <div className="proj-container" style={cardStyles}>
+      <div className="proj-container">
         <img className="cards-img" src={imgUrl} alt="project-img"/>
         <div className="card-img_hover">
             <div
@@ -40,7 +32,7 @@ export const ProjectCard = ({ title, description, imgUrl, projLink, githubLink }
         <div className="proj-info">
           <p>{description}</p>
         </div>
-        
+
       </div>
   )
 }
