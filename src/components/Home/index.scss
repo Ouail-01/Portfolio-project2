@@ -91,3 +91,45 @@
     }
     
 }
+@media screen and (max-width: 1200px) {
+  .home-page {
+    .text-zone {
+      position: initial;
+      width: 100%;
+      transform: none;
+      padding: 10px;
+      box-sizing: border-box;
+  
+      h2 {
+        text-align: center;
+      }
+    }
+    .flat-button {
+      float: none;
+      display: flex;
+      margin: 25px auto 0 auto;
+      width: 124px;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+
+      .solid-logo {
+
+      position: relative;
+      min-width: 350px;
+      height: auto;
+      top: 135px;
+      left: auto;
+      right: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      }
+    }
+  }
+}

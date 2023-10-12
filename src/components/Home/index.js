@@ -44,11 +44,13 @@ const Home = () => {
         <Link to="/contact" className="flat-button" >Contact me</Link>
 
       </div>
+      <div className="logo-img">
       <img
         className="solid-logo"
         src={LogoO}
         alt="JavaScript,  Developer"
       />
+      </div>
     </div>
     <Loader type='pacman' />
     </>
