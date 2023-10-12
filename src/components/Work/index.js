@@ -79,20 +79,7 @@ const Work = () => {
           </h1>
           
         </div>
-        <div className="cards">
-              {
-                filterProject.map((project, index) => {
-                  return (
-                    <ProjectCard
-                      key={index}
-                      {...project}
-                      />
-                  )
-                })
-              }
-         </div>
-
-         <div className="btn_container">
+        <div className="btn_container">
           <button
             className={desktop && number === 1 ? 'hidden' : 'button prev'}
             type="button"
@@ -108,6 +95,18 @@ const Work = () => {
             <PiArrowFatLinesRightBold />
           </button>
         </div>
+        <div className="cards">
+              {
+                filterProject.map((project, index) => {
+                  return (
+                    <ProjectCard
+                      key={index}
+                      {...project}
+                      />
+                  )
+                })
+              }
+         </div>
       </div>
       <Loader type="pacman" />
     </>
