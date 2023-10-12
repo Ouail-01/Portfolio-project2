@@ -1,6 +1,9 @@
 .contact-form {
-  width: 100%;
-  margin-top: 20px;
+  width: 90%;
+  margin-top: 15%;
+  display: flex;
+  justify-content: flex-end;
+
 
   ul {
     padding: 0;
@@ -78,17 +81,6 @@
   }
 }
 
-.map-wrap {
-//   background: rgba(8, 253, 216, 0.1);
-  float: right;
-  width: 53%;
-  height: 115%;
-  margin-top: -3%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .leaflet-container {
   position: relative;
   width: 100%;
@@ -119,6 +111,20 @@
 
     span {
       color: #2aa198;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  
+  .contact-form {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+    // padding: 10px;
+
+    form {
+      padding: 20px;
     }
   }
 }

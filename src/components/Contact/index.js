@@ -39,7 +39,7 @@ const Contact = () => {
           
         </div>
         
-        <div className="contact-form map-wrap">
+        <div className="contact-form">
             <form action="https://formspree.io/f/xyyvrwvj" method="post">
               <ul>
                 <li className="half">
