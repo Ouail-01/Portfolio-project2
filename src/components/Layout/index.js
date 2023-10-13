@@ -1,11 +1,8 @@
-/* eslint-disable */
 import { Outlet } from 'react-router-dom';
-import Home from '../Home/index';
 import Sidebar from '../Sidebar';
 import './index.scss';
 
-const Layout = () => {
-  return (
+const Layout = () => (
   <div className="App">
     <Sidebar />
     <div className="page">
@@ -22,7 +19,6 @@ const Layout = () => {
       </span>
     </div>
   </div>
-)
-};
+);
 
 export default Layout;

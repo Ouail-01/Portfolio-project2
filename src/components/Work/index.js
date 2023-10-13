@@ -1,15 +1,12 @@
-/* eslint-disable */
-import './index.scss'
-import Loader from 'react-loaders'
+import './index.scss';
+import Loader from 'react-loaders';
 import { useEffect, useState } from 'react';
-import projects from "./projectData";
-import { ProjectCard } from "./projectCard";
-import AnimatedLetters from '../AnimatedLetters';
 import { PiArrowFatLinesLeftBold, PiArrowFatLinesRightBold } from 'react-icons/pi';
-// import { fadeIn, slideIn } from './motion';
+import projects from './projectData';
+import ProjectCard from './projectCard';
+import AnimatedLetters from '../AnimatedLetters';
 
 const Work = () => {
-
   const [number, setNumber] = useState(1);
   const [desktop, setDesktop] = useState(false);
   const [showPerPage, setShowPerPage] = useState(1);
@@ -60,7 +57,7 @@ const Work = () => {
     const timeoutId = setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 4000);
-  
+
     // Cleanup function to clear the timeout when the component unmounts or the effect is re-run
     return () => clearTimeout(timeoutId);
   }, []);
@@ -72,12 +69,14 @@ const Work = () => {
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              My Recent Works
+              My
+              Recent
+              Works
               strArray={['M', 'y', ' ', 'R', 'e', 'c', 'e', 'n', 't', ' ', 'W', 'o', 'r', 'k', 's']}
               idx={19}
             />
           </h1>
-          
+
         </div>
         <div className="btn_container">
           <button
@@ -96,21 +95,22 @@ const Work = () => {
           </button>
         </div>
         <div className="cards">
-              {
-                filterProject.map((project, index) => {
-                  return (
-                    <ProjectCard
-                      key={index}
-                      {...project}
-                      />
-                  )
-                })
-              }
-         </div>
+          {filterProject.map((project, index) => (
+            <ProjectCard
+              key={project.id || index} // Assuming each project has a unique identifier (e.g., id)
+              title={project.title}
+              description={project.description}
+              imgUrl={project.imgUrl}
+              projLink={project.projLink}
+              githubLink={project.githubLink}
+            />
+          ))}
+        </div>
+
       </div>
       <Loader type="pacman" />
     </>
-  )
-}
+  );
+};
 
 export default Work;

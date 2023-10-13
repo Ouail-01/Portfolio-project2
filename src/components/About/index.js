@@ -1,21 +1,20 @@
-/* eslint-disable */
-import './index.scss'
-import { useEffect, useState } from 'react'
-import { faAngular, faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons'
-import Loader from 'react-loaders'
-import AnimatedLetters from '../AnimatedLetters'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import './index.scss';
+import { useEffect, useState } from 'react';
+import {
+  faAngular, faCss3, faGitAlt, faHtml5, faJsSquare, faReact,
+} from '@fortawesome/free-brands-svg-icons';
+import Loader from 'react-loaders';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import AnimatedLetters from '../AnimatedLetters';
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
-useEffect(() => {
+  useEffect(() => {
     const timeoutId = setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 4000);
-  
-    // Cleanup function to clear the timeout when the component unmounts or the effect is re-run
+
     return () => clearTimeout(timeoutId);
   }, []);
 
@@ -31,22 +30,27 @@ useEffect(() => {
             />
           </h1>
           <p>
-          I'm a passionate Full-Stack Web Developer with roots tracing back to Microverse, where intensive training launched
-           my journey. Equipped with a skill set spanning front-end technologies like HTML5, CSS3, and React, 
-           alongside back-end proficiency in Ruby on Rails and Node.js, I craft captivating web experiences.
-          </p>
-          <p align="LEFT">
-          Armed with experience in completing 20+ professional websites, I excel in bridging the technical and non-technical
-           gap. My adeptness in project management, mentorship, and collaborative problem-solving shines in remote work 
-           environments. Committed to excellence, I maintain top-tier GitHub repositories and actively contribute to diverse 
-           developer communities.
-
-
+            I&apos;m a passionate Full-Stack Web Developer with roots tracing back to Microverse,
+            where intensive training launched my journey.
+            Equipped with a skill set spanning front-end technologies like HTML5, CSS3, and React,
+            alongside back-end proficiency in Ruby on Rails and Node.js, I craft captivating
+            web experiences.
           </p>
           <p>
-          Beyond the code, I find inspiration in equestrian adventures, where the freedom and connection with nature 
-          foster creativity. This passion not only brings balance to my life but also enhances my problem-solving skills,
-           injecting a unique perspective into every web development project.
+            Armed with experience in completing 20+ professional websites, I excel in bridging
+            the technical and non-technical gap.
+            My adeptness in project management, mentorship, and collaborative problem-solving
+            shines in remote work
+            environments. Committed to excellence, I maintain top-tier GitHub repositories and
+            actively contribute to diverse
+            developer communities.
+          </p>
+          <p>
+            Beyond the code, I find inspiration in equestrian adventures, where the freedom and
+            connection with nature
+            foster creativity. This passion not only brings balance to my life but also enhances
+            my problem-solving skills,
+            injecting a unique perspective into every web development project.
           </p>
         </div>
 
@@ -75,7 +79,7 @@ useEffect(() => {
       </div>
       <Loader type="pacman" />
     </>
-  )
-}
+  );
+};
 
 export default About;

@@ -52,13 +52,12 @@
           opacity: 0;
         }
 
-        &:after {
+        &::after {
           opacity: 1;
         }
-
       }
 
-      &:after {
+      &::after {
         content: "";
         font-size: 9px;
         letter-spacing: 2px;
@@ -70,73 +69,78 @@
         opacity: 0;
         transition: all 0.3s ease-out;
       }
+
       &:first-child {
-          &::after {
-              content: "HOME";
-          }
+        &::after {
+          content: "HOME";
+        }
       }
     }
+
     a.works-link {
-        &:after {
-            content: "WORKS";
-        }
+      &::after {
+        content: "WORKS";
+      }
     }
 
     a.about-link {
-        &:after {
-            content: "ABOUT";
-        }
+      &::after {
+        content: "ABOUT";
+      }
     }
 
     a.contact-link {
-        &:after {
-            content: "CONTACT";
-        }
+      &::after {
+        content: "CONTACT";
+      }
     }
 
     a.active {
-        svg {
-            color: #2aa198;
-        }
+      svg {
+        color: #2aa198;
+      }
     }
   }
+
   ul {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      list-style: none;
-      display: block;
-      padding: 0;
-      text-align: center;
-      margin: 0;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    list-style: none;
+    display: block;
+    padding: 0;
+    text-align: center;
+    margin: 0;
 
-      li {
-          a {
-              padding: 7px 0;
-              display: block;
-              line-height: 15px;
-              font-size: 16px;
+    li {
+      a {
+        padding: 7px 0;
+        display: block;
+        line-height: 15px;
+        font-size: 16px;
 
-              &:hover svg {
-                  color: #5c7874;
-              }
-          }
+        &:hover svg {
+          color: #5c7874;
+        }
       }
+    }
   }
 }
 
-.hamburger-icon, .close-icon {
+.hamburger-icon,
+.close-icon {
   display: none;
 }
 
 @media screen and (max-width: 1200px) {
-  .nav-bar { 
+  .nav-bar {
     background: transparent;
     position: initial;
     height: auto;
     min-height: auto;
 
-    ul, nav {
+    ul,
+    nav {
       display: none;
     }
 
@@ -150,18 +154,14 @@
       z-index: 2;
       position: fixed;
       opacity: 0;
-      
-      
 
       &.mobile-show {
         display: block;
         display: flex;
-        align-items: flex-end;
         flex-direction: column;
         align-items: center;
         padding-top: 23vh;
         opacity: 1;
-        animation: transform translateY(0);
       }
 
       a {
@@ -172,7 +172,7 @@
         margin-top: 30px;
       }
 
-      a:after {
+      a::after {
         opacity: 1;
         position: initial;
         width: auto;
@@ -186,7 +186,8 @@
       }
     }
 
-    .hamburger-icon, .close-icon {
+    .hamburger-icon,
+    .close-icon {
       position: absolute;
       top: 15px;
       right: 15px;
@@ -206,6 +207,7 @@
 
       li {
         animation: fadeIn 3s backwards;
+
         a {
           font-size: 22px;
         }
