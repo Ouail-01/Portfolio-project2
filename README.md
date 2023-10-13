@@ -54,7 +54,7 @@ Create a dynamic and visually appealing personal portfolio website to showcase m
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> [Live Demo Link](https://ouail-01.github.io/Portfolio-project2/)
+> [Live Demo Link](https://ouail-laarabi.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
