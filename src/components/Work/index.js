@@ -101,6 +101,7 @@ const Work = () => {
               title={project.title}
               description={project.description}
               imgUrl={project.imgUrl}
+              tech={project.tech}
               projLink={project.projLink}
               githubLink={project.githubLink}
             />
